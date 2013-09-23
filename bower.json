@@ -1,0 +1,8 @@
+{
+  "name": "angular-md5",
+  "version": "0.0.1",
+  "main": "angular-md5.js",
+  "dependencies": {
+    "angular": "~1.2.0-rc.2"
+  }
+}
