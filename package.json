@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gdi2290/angular-md5"
+    "url": "git@github.com:gdi2290/angular-md5.git"
   },
   "licenses": [
     {
