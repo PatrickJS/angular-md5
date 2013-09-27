@@ -12,7 +12,7 @@ You can download angular-md5 by:
 
 ````html
 <body ng-app="YOUR_APP" ng-controller="MainCtrl">
-  <img ng-src="http://www.gravatar.com/avatar/{{ email | gravatar}}">
+  <img src="http://www.gravatar.com/avatar/{{ email | gravatar }}">
   <input type="email" ng-model="email" placeholder="Email Address">
   {{ message }}
 </body>
@@ -23,9 +23,13 @@ You can download angular-md5 by:
     'angular-md5',
     'controllers'
   ]);
-  angular.module('controllers', ['angular-md5'])
+  angular.module('controllers', [])
     .controller('MainCtrl', ['$scope', 'md5', function($scope, md5) {
-      $scope.message = 'Your email Hash is: ' + md5.createHash($scope.email.toLowerCase());
+      
+      $scope.$watch('email' ,function() {
+        $scope.message = 'Your email Hash is: ' + md5.createHash($scope.email || '');
+      });
+      
     }]);
 </script>
 
