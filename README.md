@@ -16,7 +16,7 @@ You can download angular-md5 by:
   <input type="email" ng-model="email" placeholder="Email Address">
   {{ message }}
 </body>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
 <script src="app/bower_components/angular-md5/angular-md5.js"></script>
 <script>
   angular.module('YOUR_APP', [
