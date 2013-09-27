@@ -12,7 +12,7 @@ You can download angular-md5 by:
 
 ````html
 <body ng-app="YOUR_APP" ng-controller="MainCtrl">
-  <img ng-src="{{ email | gravatar}}">
+  <img ng-src="http://www.gravatar.com/avatar/{{ email | gravatar}}">
   <input type="email" ng-model="email" placeholder="Email Address">
   {{ message }}
 </body>
