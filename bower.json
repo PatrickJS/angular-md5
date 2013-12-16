@@ -1,6 +1,6 @@
 {
   "name": "angular-md5",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "main": "angular-md5.js",
   "ignore": [
     "**/.*",
@@ -12,6 +12,6 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.0-rc.2"
+    "angular": "*"
   }
 }
