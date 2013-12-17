@@ -1,5 +1,5 @@
 # angular-md5 [![Build Status](https://travis-ci.org/gdi2290/angular-md5.png?branch=master)](https://travis-ci.org/gdi2290/angular-md5)
-md5 for Angular
+md5 for Angular.js and Gravatar filter
 
 #How do I add this to my project?
 
