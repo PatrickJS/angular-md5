@@ -229,5 +229,5 @@ module.filter('md5', ['md5', function(md5) {
 
 
 
-}(angular.module('angular-md5', []), angular))
+}(angular.module('angular-md5', []), angular));
 
