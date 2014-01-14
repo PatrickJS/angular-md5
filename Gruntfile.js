@@ -7,6 +7,8 @@ module.exports = function (grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    bwr: grunt.file.readJSON('bower.json'),
     nodeunit: {
       files: ['test/**/*_test.js']
     },
@@ -18,32 +20,73 @@ module.exports = function (grunt) {
         src: 'Gruntfile.js'
       },
       lib: {
-        src: ['angular-md5.js']
+        src: ['<%= bwr.name %>']
       },
       test: {
         src: ['test/**/*.js']
       }
     },
-    watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
+    concat: {
+      dist:{}
+    },
+    ngmin: {
+      dist: {}
+    },
+    uglify: {
+      options: {
+        report: 'min',
+        enclose: {
+          'this': 'window',
+          'this.angular': 'angular',
+          'void 0': 'undefined'
+        },
+        banner: '/*\n  <%= pkg.name %> - v<%= pkg.version %> \n  ' +
+          '<%= grunt.template.today("yyyy-mm-dd") %>\n*/\n'+
+        '',
       },
-      lib: {
-        files: '<%= jshint.lib.src %>',
-        tasks: ['jshint:lib', 'nodeunit']
+      dist: {
+        options: {
+          beautify: false,
+          mangle: true,
+          compress: {
+            global_defs: {
+              'DEBUG': false
+            },
+            dead_code: true
+          },
+          sourceMap: '<%= bwr.name %>.min.js.map'
+        },
+        files: {
+          '<%= bwr.name %>.min.js': ['./lib/index.js', './lib/*/*.js']
+        }
       },
-      test: {
-        files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'nodeunit']
+      src: {
+        options: {
+          beautify: true,
+          mangle: false,
+          compress: false
+        },
+        files: {
+          '<%= bwr.name %>.js': ['./lib/index.js', './lib/*/*.js']
+        }
       }
     }
   });
 
-  // Default task.
+  // Testing task
+  grunt.registerTask('test', [
+  ]);
+
+  // Build task
+  grunt.registerTask('build', [
+    'concat',
+    'ngmin',
+    'uglify'
+  ]);
+
+  // Default task
   grunt.registerTask('default', [
-    'jshint',
-    'nodeunit'
+    'build'
   ]);
 
 };
