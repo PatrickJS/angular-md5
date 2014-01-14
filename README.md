@@ -20,16 +20,16 @@ You can download angular-md5 by:
 <script src="app/bower_components/angular-md5/angular-md5.js"></script>
 <script>
   angular.module('YOUR_APP', [
-    'angular-md5',
+    'angular-md5', // you may also use 'ngMd5' or 'gdi2290.md5'
     'controllers'
   ]);
   angular.module('controllers', [])
     .controller('MainCtrl', ['$scope', 'md5', function($scope, md5) {
-      
+
       $scope.$watch('email' ,function() {
         $scope.message = 'Your email Hash is: ' + md5.createHash($scope.email || '');
       });
-      
+
     }]);
 </script>
 
