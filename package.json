@@ -1,19 +1,27 @@
 {
   "name": "angular-md5",
-  "version": "0.0.6",
+  "version": "0.1.6",
   "main": "angular-md5.js",
-  "description": "md5 component for Angular.js",
+  "description": "A md5 crypto component for Angular.js",
   "homepage": "https://github.com/gdi2290/angular-md5",
   "bugs": "https://github.com/gdi2290/angular-md5/issues",
   "author": {
     "name": "Patrick Stapleton",
-    "email": "patrick@gdi2290.com",
+    "email": "github@gdi2290.com",
     "url": "www.gdi2290.com"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:gdi2290/angular-md5.git"
   },
+  "keywords": [
+    "gdi2290",
+    "PatrickJS",
+    "angular",
+    "angularjs",
+    "md5",
+    "crypto"
+  ],
   "licenses": [
     {
       "type": "MIT"
@@ -22,11 +30,16 @@
   "dependencies": {
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
     "load-grunt-tasks": "~0.1.0",
     "time-grunt": "~0.1.0",
+    "grunt": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-watch": "~0.5.0",
     "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt-contrib-watch": "~0.5.0"
+    "grunt-ngmin": "*"
   }
 }
