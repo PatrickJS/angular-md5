@@ -31,7 +31,11 @@ module.exports = function(grunt) {
       dist:{}
     },
     ngmin: {
-      dist: {}
+      dist: {
+        files: {
+          '.tmp/<%= bwr.name %>.js': ['./lib/index.js', './lib/*/*.js']
+        }
+      }
     },
     uglify: {
       options: {
@@ -41,7 +45,7 @@ module.exports = function(grunt) {
           'this.angular': 'angular',
           'void 0': 'undefined'
         },
-        banner: '/*\n  <%= pkg.name %> - v<%= pkg.version %> \n  ' +
+        banner: '/*\n  <%= bwr.name %> - v<%= bwr.version %> \n  ' +
           '<%= grunt.template.today("yyyy-mm-dd") %>\n*/\n'+
         '',
       },
@@ -70,7 +74,37 @@ module.exports = function(grunt) {
         files: {
           '<%= bwr.name %>.js': ['./lib/index.js', './lib/*/*.js']
         }
+      },
+      buildDist: {
+        options: {
+          beautify: false,
+          mangle: true,
+          compress: {
+            global_defs: {
+              'DEBUG': false
+            },
+            dead_code: true
+          },
+          sourceMap: '<%= bwr.name %>.min.js.map'
+        },
+        files: {
+          '<%= bwr.name %>.min.js': '.tmp/<%= bwr.name %>.js'
+        }
+      },
+      buildSrc: {
+        options: {
+          beautify: {
+            indent_level: 2,
+            beautify: true
+          },
+          mangle: false,
+          compress: false
+        },
+        files: {
+          '<%= bwr.name %>.js': '.tmp/<%= bwr.name %>.js'
+        }
       }
+
     }
   });
 
@@ -82,8 +116,9 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean',
     'concat',
-    'ngmin',
-    'uglify'
+    'ngmin:dist',
+    'uglify:buildSrc',
+    'uglify:buildDist'
   ]);
 
   // Default task
