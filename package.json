@@ -19,27 +19,26 @@
     "PatrickJS",
     "angular",
     "angularjs",
-    "md5",
-    "crypto"
+    "crypto",
+    "md5"
   ],
   "licenses": [
     {
       "type": "MIT"
     }
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "load-grunt-tasks": "~0.1.0",
     "time-grunt": "~0.1.0",
     "grunt": "*",
     "grunt-contrib-copy": "*",
-    "grunt-contrib-watch": "*",
+    "grunt-contrib-watch": "~0.5.0",
     "grunt-contrib-concat": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-connect": "*",
-    "grunt-contrib-watch": "~0.5.0",
     "grunt-contrib-jshint": "~0.6.0",
-    "grunt-ngmin": "*"
+    "grunt-ngmin": "*",
+    "grunt-contrib-clean": "~0.5.0"
   }
 }

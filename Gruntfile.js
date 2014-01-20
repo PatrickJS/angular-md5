@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
@@ -26,6 +26,7 @@ module.exports = function (grunt) {
         src: ['test/**/*.js']
       }
     },
+    clean: ['.tmp/'],
     concat: {
       dist:{}
     },
@@ -79,6 +80,7 @@ module.exports = function (grunt) {
 
   // Build task
   grunt.registerTask('build', [
+    'clean',
     'concat',
     'ngmin',
     'uglify'

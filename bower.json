@@ -15,8 +15,8 @@
     "PatrickJS",
     "angular",
     "angularjs",
-    "md5",
-    "crypto"
+    "crypto",
+    "md5"
   ],
   "ignore": [
     "**/.*",
