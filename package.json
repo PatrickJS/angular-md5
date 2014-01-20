@@ -15,10 +15,11 @@
     "url": "git@github.com:gdi2290/angular-md5.git"
   },
   "keywords": [
-    "gdi2290",
     "PatrickJS",
-    "angular",
+    "gdi2290",
+    "angular.js",
     "angularjs",
+    "angular",
     "crypto",
     "md5"
   ],
