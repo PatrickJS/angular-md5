@@ -34,3 +34,5 @@ You can download angular-md5 by:
 </script>
 
 ````
+
+[MIT](https://github.com/gdi2290/angular-md5/blob/master/LICENSE)
