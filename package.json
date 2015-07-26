@@ -1,6 +1,6 @@
 {
   "name": "angular-md5",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "angular-md5.js",
   "description": "A md5 crypto component for Angular.js",
   "homepage": "https://github.com/gdi2290/angular-md5",
@@ -10,6 +10,9 @@
     "email": "github@gdi2290.com",
     "url": "www.gdi2290.com"
   },
+  "contributors": [
+  	"Benjamin Orozco <benoror@gmail.com>"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:gdi2290/angular-md5.git"
