@@ -2,7 +2,7 @@
   angular-md5 - v0.1.8 
   2015-07-26
 */
-(function(window, angular, undefined) {
+(function(angular) {
   if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports === exports) {
     module.exports = "angular-md5";
   }
@@ -200,4 +200,4 @@
     };
     return md5;
   } ]);
-})(this, this.angular, void 0);
+})(angular);
