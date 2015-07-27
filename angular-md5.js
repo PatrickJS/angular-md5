@@ -1,8 +1,13 @@
 /*
-  angular-md5 - v0.1.7 
-  2014-01-20
+  angular-md5 - v0.1.8 
+  2015-07-27
 */
-(function(window, angular, undefined) {
+
+/* commonjs package manager support (eg componentjs) */
+if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports === exports) {
+  module.exports = "angular-md5";
+}
+(function(angular) {
   angular.module("angular-md5", [ "gdi2290.md5" ]);
   angular.module("ngMd5", [ "gdi2290.md5" ]);
   angular.module("gdi2290.md5", [ "gdi2290.gravatar-filter", "gdi2290.md5-service", "gdi2290.md5-filter" ]);
@@ -197,4 +202,4 @@
     };
     return md5;
   } ]);
-})(this, this.angular, void 0);
+})(angular);

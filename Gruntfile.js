@@ -41,13 +41,14 @@ module.exports = function(grunt) {
       options: {
         report: 'min',
         enclose: {
-          'this': 'window',
-          'this.angular': 'angular',
-          'void 0': 'undefined'
+          'angular': 'angular'
         },
         banner: '/*\n  <%= bwr.name %> - v<%= bwr.version %> \n  ' +
-          '<%= grunt.template.today("yyyy-mm-dd") %>\n*/\n'+
-        '',
+	  			'<%= grunt.template.today("yyyy-mm-dd") %>\n*/\n\n'+
+					'/* commonjs package manager support (eg componentjs) */\n'+
+					'if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports === exports) {\n'+
+					'  module.exports = "angular-md5";\n'+
+					'}\n',
       },
       dist: {
         options: {
