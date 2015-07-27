@@ -1,16 +1,17 @@
 /*
   angular-md5 - v0.1.8 
-  2015-07-26
+  2015-07-27
 */
+
 /* commonjs package manager support (eg componentjs) */
 if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports === exports) {
   module.exports = "angular-md5";
 }
-
 (function(angular) {
   angular.module("angular-md5", [ "gdi2290.md5" ]);
   angular.module("ngMd5", [ "gdi2290.md5" ]);
   angular.module("gdi2290.md5", [ "gdi2290.gravatar-filter", "gdi2290.md5-service", "gdi2290.md5-filter" ]);
+  "use strict";
   angular.module("gdi2290.gravatar-filter", []).filter("gravatar", [ "md5", function(md5) {
     var cache = {};
     return function(text, defaultText) {
@@ -21,11 +22,13 @@ if (typeof module !== "undefined" && typeof exports !== "undefined" && module.ex
       return cache[text];
     };
   } ]);
+  "use strict";
   angular.module("gdi2290.md5-filter", []).filter("md5", [ "md5", function(md5) {
     return function(text) {
       return text ? md5.createHash(text.toString().toLowerCase()) : text;
     };
   } ]);
+  "use strict";
   angular.module("gdi2290.md5-service", []).factory("md5", [ function() {
     var md5 = {
       createHash: function(str) {
