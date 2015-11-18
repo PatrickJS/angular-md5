@@ -1,6 +1,6 @@
 {
   "name": "angular-md5",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "main": "angular-md5.js",
   "description": "A md5 crypto component for Angular.js",
   "author": [
@@ -11,7 +11,8 @@
     }
   ],
   "contributors": [
-  	"Benjamin Orozco <benoror@gmail.com>"
+    "PatrickJS <github@gdi2290.com",
+    "Benjamin Orozco <benoror@gmail.com>"
   ],
   "keywords": [
     "PatrickJS",
