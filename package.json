@@ -1,6 +1,6 @@
 {
   "name": "angular-md5",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "angular-md5.js",
   "description": "A md5 crypto component for Angular.js",
   "homepage": "https://github.com/gdi2290/angular-md5",

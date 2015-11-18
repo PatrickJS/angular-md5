@@ -1,6 +1,6 @@
 /*
   angular-md5 - v0.1.8 
-  2015-07-27
+  2015-11-17
 */
 
 /* commonjs package manager support (eg componentjs) */
@@ -32,6 +32,9 @@ if (typeof module !== "undefined" && typeof exports !== "undefined" && module.ex
   angular.module("gdi2290.md5-service", []).factory("md5", [ function() {
     var md5 = {
       createHash: function(str) {
+        if (null === str) {
+          return null;
+        }
         var xl;
         var rotateLeft = function(lValue, iShiftBits) {
           return lValue << iShiftBits | lValue >>> 32 - iShiftBits;
