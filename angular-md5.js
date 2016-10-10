@@ -1,6 +1,6 @@
 /*
-  angular-md5 - v0.1.8 
-  2015-11-17
+  angular-md5 - v0.1.10 
+  2016-10-10
 */
 
 /* commonjs package manager support (eg componentjs) */
@@ -25,7 +25,7 @@ if (typeof module !== "undefined" && typeof exports !== "undefined" && module.ex
   "use strict";
   angular.module("gdi2290.md5-filter", []).filter("md5", [ "md5", function(md5) {
     return function(text) {
-      return text ? md5.createHash(text.toString().toLowerCase()) : text;
+      return text ? md5.createHash(text.toString()) : text;
     };
   } ]);
   "use strict";
