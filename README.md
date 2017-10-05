@@ -1,7 +1,7 @@
 # angular-md5 [![Build Status](https://travis-ci.org/gdi2290/angular-md5.png?branch=master)](https://travis-ci.org/gdi2290/angular-md5)
 md5 for Angular.js and Gravatar filter
 
-#How do I add this to my project?
+## How do I add this to my project?
 
 You can download angular-md5 by:
 
@@ -34,5 +34,6 @@ You can download angular-md5 by:
 </script>
 
 ````
+## License
 
 [MIT](https://github.com/gdi2290/angular-md5/blob/master/LICENSE)
